@@ -2,3 +2,8 @@
  (public_name gvecdb)
  (name main)
  (libraries gvecdb lmdb))
+
+(executable
+ (name example)
+ (libraries gvecdb)
+ (modules example))

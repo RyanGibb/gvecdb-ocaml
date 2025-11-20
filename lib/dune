@@ -1,2 +1,5 @@
 (library
- (name gvecdb))
+ (name gvecdb)
+ (public_name gvecdb)
+ (libraries lmdb)
+ (modules types keys store gvecdb))
