@@ -15,6 +15,12 @@ type edge_id = id
 (** vector ID *)
 type vector_id = id
 
+(** node information record *)
+type node_info = {
+  id : node_id;
+  node_type : string;
+}
+
 (** edge information record *)
 type edge_info = {
   id : edge_id;
@@ -51,4 +57,3 @@ end
 
 (** current database version *)
 let db_version = 1L
-

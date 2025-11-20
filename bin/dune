@@ -5,5 +5,5 @@
 
 (executable
  (name example)
- (libraries gvecdb)
+ (libraries gvecdb test_schemas capnp)
  (modules example))

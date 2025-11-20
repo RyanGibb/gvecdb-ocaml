@@ -9,7 +9,8 @@ let create (path : string) : t =
   (* we use exactly 7 named LMDB databases: nodes, edges, outbound, inbound,
      intern_forward, intern_reverse, metadata *)
   let max_maps = 7 in
-  let env = Lmdb.Env.create Lmdb.Rw ~max_maps ~flags path in
+  let map_size = 10 * 1024 * 1024 in
+  let env = Lmdb.Env.create Lmdb.Rw ~max_maps ~map_size ~flags path in
   
   (* create/open all required indexes *)
   let nodes = Lmdb.Map.create Lmdb.Map.Nodup ~name:"nodes" 
